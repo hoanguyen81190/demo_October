@@ -41,6 +41,11 @@ class OrchestrationRule:
     def service_definition(self) -> str:
         """Service definition registered in the :ref:`service-registry`"""
         return self._consumed_service.service_definition
+    
+    @property
+    def interface(self) -> str:
+        """Added property interface"""
+        return self._consumed_service.interface
 
     @property
     def protocol(self) -> str:
