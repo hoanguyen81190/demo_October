@@ -111,6 +111,8 @@ class ArrowheadClientSync(ArrowheadClient):
 
         for rule in rules:
             self.orchestration_rules.store(rule)
+            
+        return rules
 
     def run_forever(self) -> None:
         """

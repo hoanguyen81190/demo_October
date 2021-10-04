@@ -51,9 +51,9 @@ if __name__ == '__main__':
     #Consumer services
     
     rules = robot_consumer.add_orchestration_rule(service_definition, 'GET')
-    #print("RULES", rules[0].system_name, rules[0].endpoint, rules[0].interface.dto())
-    #print("RULES", rules[0].system_name, rules[0].endpoint, rules[0].interface.dto())
-    sendOrchestrationStoreEntry(robot_consumer, rules[0].system_name, rules[0].endpoint, rules[0].interface.dto())
+    print("RULES", rules[0].system_name, rules[0].endpoint, rules[0].interface.dto())
+
+    #sendOrchestrationStoreEntry(robot_consumer, rules[0].system_name, rules[0].endpoint, rules[0].interface.dto())
 
     #response = robot_consumer.consume_service(service_definition)
     #print(response.read_json()['system_name'], response.read_json()['service_name'])
