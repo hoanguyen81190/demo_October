@@ -70,7 +70,7 @@ def temp_function(mu, sigma, start_time, consumer):
         print("current time", current_time)
         t = random.gauss(mu, sigma)*100
         response_t  = robot_producer.consume_service_raw(
-                   CoreServices.PROXY_PUT_DATA('robot_producer', 'temp_service'),
+                   CoreServices.PROXY_PUT_DATA('robot_producer', 'temp_service_definition'),
                    json=[{
                         "bn": "temp_sensor",
                         "bs": 0,
@@ -92,7 +92,7 @@ def temp_function(mu, sigma, start_time, consumer):
         
         h = random.gauss(mu, sigma)*100
         response_h = robot_producer.consume_service_raw(
-                   CoreServices.PROXY_PUT_DATA('robot_producer', 'humidity_service'),
+                   CoreServices.PROXY_PUT_DATA('robot_producer', 'humidity_service_definition'),
                    json=[{
                         "bn": "humidity_sensor",
                         "bs": 0,
@@ -114,7 +114,7 @@ def temp_function(mu, sigma, start_time, consumer):
         
         p = random.gauss(mu, sigma)*100
         response_p = robot_producer.consume_service_raw(
-                   CoreServices.PROXY_PUT_DATA('robot_producer', 'pressure_service'),
+                   CoreServices.PROXY_PUT_DATA('robot_producer', 'pressure_service_definition'),
                    json=[{
                             "bn": "pressure_sensor",
                             "bs": 0,

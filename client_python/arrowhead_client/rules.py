@@ -81,6 +81,21 @@ class OrchestrationRule:
     def system_name(self) -> str:
         """Provider system name"""
         return self._provider_system.system_name
+    
+    @property
+    def address(self) -> str:
+        """The URI to the service, without the protocol"""
+        return self._provider_system.address
+    
+    @property
+    def port(self) -> str:
+        """The URI to the service, without the protocol"""
+        return self._provider_system.port
+    
+    @property
+    def service_uri(self) -> str:
+        """The URI to the service, without the protocol"""
+        return self._provider_system.service_uri
 
     @property
     def endpoint(self) -> str:

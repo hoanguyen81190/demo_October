@@ -45,6 +45,18 @@ class CoreServices(CoreConfig, Enum):
         'POST', 'HTTP', 'JSON',
         constants.CoreSystem.ORCHESTRATOR.value,
     )
+    ORCHESTRATION_GET_STORE = (
+        'orchestration-store',
+        'orchestrator/mgmt/store',
+        'GET', 'HTTP', 'JSON',
+        constants.CoreSystem.ORCHESTRATOR.value,
+    )
+    ORCHESTRATION_POST_STORE = (
+        'orchestration-store',
+        'orchestrator/mgmt/store',
+        'POST', 'HTTP', 'JSON',
+        constants.CoreSystem.ORCHESTRATOR.value,
+    )
     PUBLICKEY = (
         'auth-public-key',
         'authorization/publickey',

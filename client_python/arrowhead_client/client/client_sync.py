@@ -47,7 +47,6 @@ class ArrowheadClientSync(ArrowheadClient):
             **kwargs
     ):
         rule = self.orchestration_rules.get(serviceObj.service_definition)
-        print("WTF", kwargs)
         raw_service = Service(serviceObj.service_definition,
                               serviceObj.uri,
                               rule._consumed_service.interface,
